@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Address Form</title>
+    <style>
+        body {
+            background-color: #f5f5dc; /* Cream color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #4682b4; /* Steel Blue */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="button"] {
+            background-color: #4caf50; /* Green */
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Address Form</h1>
+    <form id="addressForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address"><br>
+
+        <input type="button" value="Show Person" onclick="showPerson()">
+    </form>
+
+    <script>
+        function showPerson() {
+            // Get the values from the form
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var address = document.getElementById('address').value;
+
+            // Display the values in an alert
+            alert('Your Details has been saved \nName: ' + name + '\nEmail: ' + email + '\nAddress: ' + address);
+        }
+    </script>
+</body>
+
+</html>
